@@ -7,7 +7,7 @@ public class Hashmap {
 		 * key type will be eiether int or string
 		 */
 		HashMap<Integer,String> studentslist = new HashMap<Integer,String>();
-		//assume the number as a roll number for the student
+		//assume the number as a roll number for the students
 		
 		//put method is used to add elements into the hashmap
 		studentslist.put(1,"alpha");
