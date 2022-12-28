@@ -1,0 +1,29 @@
+import java.util.HashSet;
+
+public class Hashset {
+
+	public static void main(String[] args) {
+		//hashset collection consists and takes only unique elements even if we add same elements
+		HashSet<String>names = new HashSet<String>();
+		names.add("james");
+		names.add("smith");
+		names.add("krish");
+		names.add("james"); //we are giving a dupliacte, but hashset donot consider it
+		for(String s : names) {
+			System.out.println(s);
+		}
+		
+		//contains() method returns true if the searching element present in hashset else returns false 
+		System.out.println(names.contains("smith"));
+		
+		//remove() method deletes the given element
+		names.remove("smith");
+	    
+		//size() method returns the the size of hashset
+		System.out.println(names.size());
+		
+		//clear() method empties the hashset
+		names.clear();
+	}
+
+}

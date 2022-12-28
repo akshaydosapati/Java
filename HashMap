@@ -1,0 +1,46 @@
+import java.util.HashMap;
+public class Hashmap {
+
+	public static void main(String[] args) {
+		/*Hashmap stores items in key, value pairs
+		 * the key acts an as index for the value
+		 * key type will be eiether int or string
+		 */
+		HashMap<Integer,String> studentslist = new HashMap<Integer,String>();
+		//assume the number as a roll number for the student
+		
+		//put method is used to add elements into the hashmap
+		studentslist.put(1,"alpha");
+		studentslist.put(2,"beta");
+		studentslist.put(3,"gama");
+		
+		//get method used to return the value of a key
+		System.out.println(studentslist.get(1));
+		
+		//size method returns the capacity of hashmap
+		System.out.println(studentslist.size());
+		
+		//.keyset() only returns the keys
+		for(int i : studentslist.keySet()) { 
+			System.out.println(i); 
+		}
+		
+		//.values() only returns values of keys
+		for(String s : studentslist.values()) {
+			System.out.println(s);
+		}
+		
+		//to get both keys and it's values
+		for(int i : studentslist.keySet()) {
+			System.out.println(i+" "+studentslist.get(i));
+		}
+		
+		//remove method used to remove the item refer to the key
+		studentslist.remove(3);
+		
+		//clear() method empties the entire hashmap
+		studentslist.clear();
+		
+	}
+
+}
