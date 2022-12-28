@@ -13,7 +13,7 @@ public class Hashset {
 			System.out.println(s);
 		}
 		
-		//contains() method returns true if the searching element present in hashset else returns false 
+		//contains() method returns true if the searching elements present in hashset else returns false 
 		System.out.println(names.contains("smith"));
 		
 		//remove() method deletes the given element
