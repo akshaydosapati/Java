@@ -1,0 +1,35 @@
+//Binary search returns the index of the given value
+class Bs{
+    public static void main(String[] args){
+    int[] arr = {1,2,3,4,5};
+    // binary search can be performed in two different ways: iterative and recursive methods
+    iterativesearch(arr,2);
+    recurse(arr,0,arr.length-1,4);
+    }
+    public static int iterativesearch(int[] arr,int value){
+        /* This iterative search starts with using while loop
+        * after entering into while loop, we are using mid to compare first for the targeted value
+        * It is the most suitable and efficient way in terms of complexity with high volume of inputs,
+        * instead of using brute-force approach. Now, will check whether the targeted value is lesser
+        * or greater than the mid element, so that we can change the start value with mid+1 else
+        * end with mid value.
+        */
+        int start = 0;
+        int end = arr.length;
+        while(start < end){
+            int mid = (start+end)/2;
+            if(arr[mid] == value) return mid;
+            else if(arr[mid] < value) start = mid+1;
+            else end = mid;
+        }
+        return -1;
+    }
+    public static int recursive(int[] arr,int start,int end,int target){
+        // This recursive approach also works same as iterative exception with recursive calls and with a base condition
+        if(start >= end) return -1;
+        int mid = (start+end)/2;
+        if(arr[mid] == target) return mid;
+        else if(arr[mid] > target) recursive(arr,start,mid,target);
+        else recursive(arr,mid,end,target);
+    }
+}
