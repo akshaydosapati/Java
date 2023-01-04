@@ -1,0 +1,19 @@
+/* Select the first element and compare it with second element and make a swap second one is smaller than first element.
+ * Then, compare the second element with third element and do a swapping process if third element is smaller
+ * Thereafter repeat till the last element of the array.
+ */ 
+class BubbleSort{
+    public static void main(String[] args){
+        int[] arr = {5,4,3,2,1,0};
+        for(int i = 0;i < arr.length-1;i++){
+            for(int j = 0;j < arr.length - 1 - i;j++){
+                if(arr[j] > arr[j+1]){
+                    int temp = arr[j+1];
+                    arr[j+1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+    }
+}
+*It is an inplace and least efficient algorithm, and degrades quickly.
