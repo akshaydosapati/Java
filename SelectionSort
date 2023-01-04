@@ -1,0 +1,16 @@
+// In selection sort, we compare the first element with all others and then do a swap if there is smallest element than the selected one's and in next iteration perform the stepa with next elements.
+class SelectionSort{
+    public static void main(String[] args){
+        int[] arr = {5,4,3,2,1};
+        for(int i = 0;i < arr.length-1;i++){
+            int min = i;
+            for(int j = i + 1;j < arr.length;j++){
+                if(arr[min] > arr[j]) min = j;
+            }
+            int temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = k;
+        }
+    }
+}
+* It is an inplace algorith and doesn't require as much swapping as bubble sort does.
