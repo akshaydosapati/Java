@@ -1,0 +1,21 @@
+/* It is also an extension of Insertion sort, starts with comparing the values with larger gap and 
+ * when the algorith runs the gap reduces and must be greater than zero. 
+ * When gap value is 1, insertion sort takes place.
+ */ 
+
+ class ShellSort{
+    public static void main(String[] args){
+        int[] arr = {6,5,4,3,2,1};
+        for(int gap = arr.length/2; gap > 0; gap /= 2){
+            for(int i = gap;i < arr.length;i++){
+                int temp = arr[i];
+                int j = i; // j takes a primary role in comparing the values between j & j - gap in the while loop
+                while(j >= gap && arr[j - gap] > temp){
+                    arr[j] = arr[j - gap];
+                    j -= gap;
+                }
+                arr[j] = temp;
+            }
+        }
+    }
+ }
