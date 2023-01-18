@@ -1,0 +1,78 @@
+// Implementation of Stack Using Array
+/*When implementing with array declare a maximun size
+ *also need a variable to track the array after adding the elements i.e., til what index array is filled
+ *stack basic operations are push, pop, peek, size 
+ */
+class stack{
+    int[] temp = new int[1000];
+    int count = -1;
+    public boolean isEmpty(){
+        if(count < 0) return true;
+        return false;
+    }
+    public void push(int data){
+        if(count >= temp.length) System.out.println("over flow");
+        temp[++count] = data;
+    }
+    public void pop(){ // Last in First out, always the last element of the stack is removed
+        if(count < 0) System.out.println("under flow");
+        temp[count--];
+    }
+    public int peek(){ //returns the last element of stack
+        if(count < 0) return 0;
+        return temp[count];
+    }
+    public int size(){ //returns the size of stack
+        return count;
+    }
+}
+
+//Impelementation of Stack Using LinkedList
+/*when implementing stack with linked list, we need a static class Node to make a reference for every time data has been added. 
+ *We also need a variable to track the stack's size. Thus put it the constructor.
+ *Also while removing the elements the size of the array gets changed, thus size-- is in line 61 to get exact stack's size 
+ */
+static class Node{
+    Node next;
+    int data;
+    int size;
+    Node(int data){
+        this.data = data;
+        this.next = null;
+        size++;
+    }
+}
+static class stack{
+    staic Node head;
+    public static void push(int data){
+        Node temp = new Node(data);
+        if(head ==  null) {
+            head = data;
+            return;
+        }
+        temp.next = head;
+        head = temp;
+    }
+    public boolean isEmpty(){
+        return head == null;
+    }
+    public static void pop(){
+        head = head.next;
+        size--;
+    }
+    public static void lengthofstack(){
+        return size;
+    }
+    public static void print(){
+        Node temp = head;
+        while(temp.next != null){
+            System.out.println(temp.data);
+            temp = temp.next;
+        } 
+        System.out.println(temp.data);
+    }
+    public static int peek(){
+        if(isEmpty()) return -1;
+        return head.data;
+    }
+}
