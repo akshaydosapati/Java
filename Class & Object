@@ -9,7 +9,7 @@ class Calculator{
     // void type doesn't return anything
     void addition(){ 
         result = a+b;
-    }
+    }  
 
 }
 class Main{
