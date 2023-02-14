@@ -18,7 +18,7 @@ class Main{
          *The second word after Calculator is the name or a reference given to the created object 
          */
          Calculator c = new Calculator();
-         //the vairables and methods with in the Calculator class should be called and initialized with the refernce of a class name(currenly - "c")
+         //the vairables and methods with in the Calculator class should be called and initialized with the refernce of a class name(currently - "c")
          c.a = 1;
          c.b = 2;
          c.addition();
