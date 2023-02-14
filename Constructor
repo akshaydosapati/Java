@@ -30,9 +30,14 @@ class Calci{
     int a;
     int b;
     //constructor with single parameter
-    public Calci(int n){
-        a = n;
-        b = n;
+    public Calci(int a){
+         /*whenever we are having the same name for local and instance variables, using this keyword will helps us 
+          *the variable 'a' within this method is local variable and within this class is instance variable
+          *this keyword will initialize the value of a local variable to instance variable
+          *if we do not use this keyword, we get a value as zero
+          */
+        this.a = a;
+        this.b = a;
     }
     //constructor with two parameters
     public Calci(float f,int n){
