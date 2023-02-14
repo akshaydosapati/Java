@@ -3,6 +3,10 @@
  *By default, whatever the things parent consists will be inherited to it's child, 
  *along with that we can also add extra propertities or anything we require to child classes
  */
+
+
+                         *******************SINGLE INHERITANCE*******************
+// single inheritance defines single parent contains mutliple children
 class Shapes{
     int len = 4;
     int breadth = 10;
@@ -27,3 +31,56 @@ class Main{
         int b = r.rect_area();
     }
 }
+
+
+                           *******************MULTILEVEL INHERITANCE*******************
+
+// multilevel inheritance means genrating a child class to the child class of a parent class
+
+class shape{
+  public void disp() {
+	  System.out.println("display area");
+  }
+}
+class Triangle extends shape{
+	public void area(int b,int h) {
+		System.out.println((b*h)/2);
+	}
+}
+class equilateral extends Triangle{
+	public void area(int b,int h) {
+		System.out.println((b*h)/2);
+	}
+}
+public class MultiLevelInherit {
+	//It means deriving a new child class from already derived child class of a sub class
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		equilateral e1 = new equilateral();
+		e1.disp();
+		e1.area(4, 4);
+	}
+}
+
+
+*****Hierarchical Inheritance****** ---> single parent consists multiple children
+*****Hybrid Inheritance***** ---> it is a combination of all inheritances 
+
+
+   *******************Multiple Inheritance*******************
+      definition: a child class can be derived from mutliple classes
+      Generally java doesn't support multiple inheritance because:
+
+            class A{
+                show();
+            }
+            class B{
+                show();
+            }
+            class C extends A,B{
+
+            } 
+    /*a class can be derived from single class
+     *If we try to dervive from two parents, it leads to ambiguity
+     *while calling the show method with C refernce, the JVM will confuse which show method to be used.
+     */
