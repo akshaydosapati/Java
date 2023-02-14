@@ -51,3 +51,30 @@ class Main{
          Calci a = new Calci(1.2f,2); //a parameterized call with two parameters
     }
 }
+
+                    ************************************************************
+                    *****************CONSTRUCTOR OVERLOADING********************
+                    ************************************************************
+
+class Add{
+    int a;
+    int b;
+    int c;
+    //constructor with two parameters 
+    public Add(int a,int b){
+        this.a = a;
+        this.b = b;
+    }
+    //constructor method with three parameters
+    public Add(int a,int b,int c){
+        this.a = a;
+        this.b = b;
+        this.c = a+b;
+    }
+}
+class Main{
+    PSVM(String[] args){
+        Add a1 = new Add(2,3);
+        Add a2 = new Add(1,2,3);
+    }
+}

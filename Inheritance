@@ -1,0 +1,29 @@
+/*Inheritance is like copying the properties and values of one class to other class
+ *IN the below example, Shapes is the parent class and square, rectangle are child classes of parent
+ *By default, whatever the things parent consists will be inherited to it's child, 
+ *along with that we can also add extra propertities or anything we require to child classes
+ */
+class Shapes{
+    int len = 4;
+    int breadth = 10;
+    int side = 4;
+}
+class square extends Shapes{
+    public int square_area(){
+        return side*side;
+    }
+}
+class rectangle extends Shapes{
+    public int rect_area(){
+        return length*breadth;
+    }
+}
+
+class Main{
+    public static void main(String[] args){
+        square s = new square();
+        int a = s.square_area();
+        rectangle r = new rectangle();
+        int b = r.rect_area();
+    }
+}

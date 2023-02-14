@@ -1,0 +1,20 @@
+class outer{
+	public void show() {
+		System.out.println("Outer class");
+	}
+	class inner{
+		public void disp() {
+			System.out.println("Inner class");
+		}
+	}
+}
+class Main{
+	public static void main(String args[]) {
+		outer o = new outer();
+        o.show();
+        //the class within a class object can be created with the below line
+        *********Syntax: outer_classname.inner_classname refernce_name = outer_class_referencename.new inner_classname()*********
+        outer.inner i = o.new inner();
+        i.disp();
+	}
+}

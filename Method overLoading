@@ -1,0 +1,18 @@
+//Method overloading means different methods having same names, but different parameters, different datatypes and functionalitites
+class ML{
+    //add method with two parameters and functioning addition 
+    public int add(int a,int b){
+        return a+b;
+    }
+    //add method with three parameters and functioning multiplication 
+    public int add(int a,int b,int c){
+        return a*b*c;
+    }
+}
+class Main{
+    PSVM(String[] args){
+        ML s = new ML();
+        int a = s.add(1,2); //a call with a two parameters
+        int b = s.add(1,2,3); //a call with three parameters
+    }
+}
