@@ -1,4 +1,8 @@
 class BinaryTree{
+
+    /*A binary tree is made upof nodes, where each node has a reference to left and roght children.  
+     *For every element of a new node(call from line no: 23) has been created with the help of a static class Node.
+     */ 
     public static class Node{
         int data;
         Node lc; //left child
@@ -9,14 +13,18 @@ class BinaryTree{
             this.rc = null;
         }
     }
+    /*builder class is used for the formation of a tree with the given elements.
+     *We can use a builder object along with build method to call from main method to construct tree.
+     */
     public static class builder{
         static int size = -1;
         public static Node buildtree(int arr[]){
-            // with this method a complete binary tree has been
+            // with this method we can obtain a complete binary tree
             // After getting root element i.e., n we can perform many operations further
             size++;
             if(arr[size] == -1 || size >= arr.length) return null;
-            Node n = new Node(arr[size]); // root of the tree
+            //for every element the call will go to Node class to create a new node
+            Node n = new Node(arr[size]); 
             n.lc = buildtree(arr);
             n.rc = buildtree(arr);
             return n;
@@ -24,21 +32,21 @@ class BinaryTree{
     }
     public void preorder(Node root){
         //It is a basic operation of tree
-        //It first prints the root, then left subtree, thereafter right subtree
+        //It first visits the root, then left subtree, thereafter right subtree
         if(root == null) return;
         System.out.print(root.data+" ");
         preorder(root.lc);
         preorder(root.rc);
     }
     public void inorder(Node root){
-        //It first prints the left subtree, then root element, thereafter right subtree
+        //This traversal first visits left sub tree, then root and finally right sub tree.
         if(root == null) return;
         inorder(root.lc);
         System.out.print(root.data+" ");
         inorder(root.rc);
     }
     public void postorder(Node root){
-        //It first prints the left subtree, then root element, thereafter right subtree
+        //It first travese throgh the left subtree, thenright subtree, thereafter root
         if(root == null) return;
         postorder(root.lc);
         postorder(root.rc);
