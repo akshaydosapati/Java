@@ -1,0 +1,48 @@
+/*A constructor is a member method with no return type and it's name should be same as class name
+ *Whenever we creates an object, it communicates with JVM for the object creation and space needed to construct the class will be given by constructor 
+ *It means, constructor used to allocate memory to object
+ */
+
+class Calci{
+    int a;
+    int b;
+    /*default constructor
+     *The below one is the default one, which means no need to create seperately
+     */ 
+    public Calci(){
+        a = this.a;
+        b = this.b;
+    }
+}
+class Main{
+     public static void main(String[] args){
+         Calci c = new Calci();
+         c.a = 1;
+         c.b = 2;
+    }
+}
+                **************************************************
+                **************************************************
+                         PARAMETERIZED CONSTRUCTOR
+
+//parameterized constructor can have one or more arguments
+class Calci{
+    int a;
+    int b;
+    //constructor with single parameter
+    public Calci(int n){
+        a = n;
+        b = n;
+    }
+    //constructor with two parameters
+    public Calci(float f,int n){
+        a = (int)f;
+        b = n;
+    }
+}
+class Main{
+     public static void main(String[] args){
+         Calci c = new Calci(3); //a parameterized call with a single parameter
+         Calci a = new Calci(1.2f,2); //a parameterized call with two parameters
+    }
+}
