@@ -12,7 +12,7 @@ class SelectionSort{
             }
             int temp = arr[i];
             arr[i] = arr[min];
-            arr[min] = k;
+            arr[min] = temp;
         }
     }
 }
