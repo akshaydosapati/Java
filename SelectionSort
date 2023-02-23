@@ -1,4 +1,7 @@
-// In selection sort, we compare the first element with all others and then do a swap if there is smallest element than the selected one's and in next iteration perform the stepa with next elements.
+/*  In selection sort, every time we are comparing every element with remaining elements
+ *  then swapping if there is smallest element than the selected one's 
+ *  and in next iteration performing the same process with next elements.
+ */
 class SelectionSort{
     public static void main(String[] args){
         int[] arr = {5,4,3,2,1};
